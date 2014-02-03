@@ -1,4 +1,10 @@
-hello
-=====
+hello_restify
+=============
 
-Trying things out
+minimal restify app that serves static files
+
+To start:
+```
+$npm install restify
+$node server.js
+```

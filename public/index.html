@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<h1>{{ greeting }}</h1>
+<div>
+    {{ time | date:'medium' }}
+</div>
+</body>
+
+</html>
