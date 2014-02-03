@@ -39,7 +39,10 @@
             controller: "App2Ctrl",
             owner: "C",
             resolve: {
-                myNameIs: function ($q, $timeout) {
+                myNameIs: function ($q, $timeout, $route, $location, $routeParams) {
+                    console.log("$location.path() = ", $location.path());
+                    console.log("$route.current = ", angular.toJson($route.current));
+                    console.log("$routeParams = ", angular.toJson($routeParams));
                     var deferred = $q.defer();
                     $timeout(function () {
                         deferred.resolve("Juan Menudo")
