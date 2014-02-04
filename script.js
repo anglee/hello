@@ -45,7 +45,7 @@
                     console.log("$routeParams = ", angular.toJson($routeParams));
                     var deferred = $q.defer();
                     $timeout(function () {
-                        deferred.resolve("Juan Menudo")
+                        deferred.resolve("Juan Menudo");
                     }, 2000);
                     return deferred.promise;
                 }
