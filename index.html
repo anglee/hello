@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .text-red {
+            color: red;
+        }
+        .text-orange {
+            color: orange !important;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    .text-red {
+        color: red;
+    }
+    .text-orange {
+        color: orange !important;
+    }
+    </pre>
+<!-- this is blue   --><div style="color:blue">TEXT(style="color:blue")</div>
+<!-- this is red    --><div class="text-red">TEXT(class="text-red")</div>
+<!-- this is orange --><div class="text-orange">TEXT(class="text-orange")</div>
+<!-- this is blue   --><div class="text-red" style="color:blue">TEXT(class="text-red" style="color:blue")</div>
+<!-- this is blue   --><div style="color:blue" class="text-red">TEXT(style="color:blue" class="text-red")</div>
+<!-- this is orange --><div class="text-orange" style="color:blue">TEXT(class="text-orange" style="color:blue")</div>
+<!-- this is orange --><div style="color:blue" class="text-orange">TEXT(style="color:blue" class="text-orange")</div>
+</body>
+</html>
