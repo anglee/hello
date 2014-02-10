@@ -1,0 +1,9 @@
+{
+    "name": "hello",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "karma" : "~0.10",
+        "karma-jasmine" : "~0.1"
+    }
+}
