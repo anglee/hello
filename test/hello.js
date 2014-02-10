@@ -5,6 +5,21 @@ describe("hello, karma", function () {
             expect(1+1).toBe(2);
         });
     });
+    describe("custom matcher", function () {
+        beforeEach(function () {
+            this.addMatchers({
+                toBe3Plus: function (expected) {
+                    return this.actual === 3 + expected;
+                }
+            });
+        })
+        it("should work", function () {
+            expect(1+1).toBe(2);
+        });
+        it("should work with the custom matcher", function () {
+            expect(3+1).toBe3Plus(1);
+        })
+    });
     describe("angular basic", function () {
         var element;
         var $scope;
