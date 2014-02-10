@@ -32,31 +32,46 @@ describe("hello, karma", function () {
         });
     });
     describe("angular controller", function () {
-        var myController;
-        beforeEach(module("app"));
-        beforeEach(inject(function ($controller) {
-            myController = $controller("myController");
+        var myController, anotherServiceSpy;
+        beforeEach(module("app", function ($provide) {
+            anotherServiceSpy = jasmine.createSpyObj("anotherService", ["aMethod"]);
+            anotherServiceSpy.aMethod.andReturn("test passed");
+
+            $provide.value("anotherService", anotherServiceSpy);
+        }));
+        beforeEach(inject(function ($controller, $rootScope) {
+            var $scope = $rootScope.$new();
+            myController = $controller("myController", {$scope: $scope});
         }));
         describe("myController", function () {
             it("should have a message of hello", function () {
                 expect(myController.message).toBe("Hello");
             });
+            it("should call anotherService.test", function () {
+                expect(anotherServiceSpy.aMethod).toHaveBeenCalled();
+            })
         });
     });
     describe("angular directive", function () {
-        var element;
+        var element, $scope;
         beforeEach(module("app"));
         beforeEach(inject(function ($compile, $rootScope) {
             element = angular.element("<div my-directive></div>");
             $compile(element)($rootScope);
+            $scope = element.isolateScope();
+            $scope.foo = jasmine.createSpy();
         }));
         it("should add a class of plain", function () {
             expect(element.hasClass("plain")).toBe(true);
         });
-        it ("should respond to a click", function () {
+        it("should respond to a click", function () {
             browserTrigger(element, "click");
             //expect(element.scope().clicked).toBe(true); // if the scope is not isolated
             expect(element.isolateScope().clicked).toBe(true);
+        });
+        it("should call foo() responding to a click", function () {
+            browserTrigger(element, "click");
+            expect($scope.foo).toHaveBeenCalledWith("AAA");
         });
     });
 });

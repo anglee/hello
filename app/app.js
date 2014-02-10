@@ -6,8 +6,9 @@ app.service("myService", function () {
     };
 });
 
-app.controller("myController", function () {
+app.controller("myController", function (anotherService) {
     this.message = "Hello";
+    anotherService.aMethod();
 });
 
 app.directive("myDirective", function () {
@@ -15,8 +16,13 @@ app.directive("myDirective", function () {
         scope: {},
         link: function (scope, element, attr) {
             element.addClass("plain");
+            // scope.foo will not be executed during test as it is overridden by the jasmine spy.
+            scope.foo = function (aaa) {
+                console.log(aaa);
+            };
             element.bind("click", function () {
                 scope.clicked = true;
+                scope.foo("AAA");
             });
         }
     };
