@@ -1,4 +1,10 @@
-hello
+hello karma
 =====
 
-Trying things out
+unit-testing angular with karma and jasmine
+
+```
+$ npm install
+$ bower install
+$ karma start
+```
