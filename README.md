@@ -1,4 +1,4 @@
 hello
 =====
 
-Trying things out
+open SpecRunner.html in browser
