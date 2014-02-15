@@ -1,4 +1,11 @@
 hello
 =====
+```
+$ npm install
+$ bower install
+$ webdriver-manager update
 
-Trying things out
+$ python -m SimpleHTTPServer 3000
+
+$ protractor test/protractor.conf.js
+```
