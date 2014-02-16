@@ -4,5 +4,13 @@ exports.config = {
         './e2e/**/*.spec.js'
     ],
 
-    baseUrl: 'http://localhost:3000'
+    baseUrl: 'http://localhost:3000',
+
+    // For speed, let's just use the Chrome browser.
+    chromeOnly: true,
+
+    // Options to be passed to Jasmine-node.
+    jasmineNodeOpts: {
+        showColors: true
+    }
 };
