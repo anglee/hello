@@ -1,15 +1,23 @@
+
 describe("hello-protractor", function () {
-    describe("index", function () {
+    var page = require('./index.page.js');
+    beforeEach(function () {
+        page.get();
+    })
+    describe("index page", function () {
         it("should display the correct title", function () {
-            browser.get('app/#');
-            expect(browser.getTitle()).toBe('hello');
+            expect(page.getTitle()).toBe('hello');
         });
 
         it("should change div text when button is clicked", function () {
-            var button = element(by.id('button1'));
-            var message = element(by.binding('foo.bar'));
-            button.click();
-            expect(message.getText()).toBe('test');
+            page.clickButton();
+            expect(page.getMessageText()).toBe('test');
         });
     });
+    describe("get index page again", function () {
+        it("should reset message", function () {
+            expect(page.getMessageText()).toBe('bar');
+        })
+    });
+
 });

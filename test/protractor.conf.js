@@ -1,7 +1,8 @@
 exports.config = {
 
     specs: [
-        './e2e/**/*.spec.js'
+        './e2e/**/*.spec.js',
+        './e2e/**/*.page.js'
     ],
 
     baseUrl: 'http://localhost:3000',
