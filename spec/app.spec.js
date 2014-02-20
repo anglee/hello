@@ -1,5 +1,5 @@
-describe("Hello world", function() {
-    it("says hello", function() {
+describe("helloWorld", function() {
+    it("should say hello world", function() {
         expect(helloWorld()).toEqual("Hello world!");
     });
 });
