@@ -32,4 +32,7 @@ $ gulp script
 $ cat dist/all.js
 ```
 
+===
+ref:
+http://travismaynard.com/writing/getting-started-with-gulp
 
