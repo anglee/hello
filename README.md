@@ -34,5 +34,10 @@ $ cat dist/all.js
 
 ===
 ref:
+
 http://travismaynard.com/writing/getting-started-with-gulp
+
+https://github.com/gulpjs/gulp/tree/master/docs
+
+http://gulpjs.com/
 
