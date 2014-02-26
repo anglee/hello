@@ -1,3 +1,4 @@
 (function () {
-    console.log("B");
+    var bbbbbbbb = "B";
+    console.log(bbbbbbbb);
 })();

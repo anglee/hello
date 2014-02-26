@@ -13,7 +13,7 @@ $ npm install --save-dev gulp
 #$ npm install gulp
 
 # install plugins
-$ npm install gulp-concat
+$ npm install gulp-concat gulp-rename gulp-uglify
 ```
 
 run the default task

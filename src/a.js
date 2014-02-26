@@ -1,3 +1,4 @@
 (function () {
-    console.log("A");
+    var aaaaaaaaa = "A";
+    console.log(aaaaaaaaa);
 })();
