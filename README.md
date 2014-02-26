@@ -1,6 +1,24 @@
 hello
 =====
 
-Just me trying things out ...
+```
+$ npm install -g gulp
+$ npm install --save-dev gulp
+```
 
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)
+run the default task
+```
+$ gulp
+```
+
+run 'hello' task
+```
+$ gulp hello
+```
+
+run 'script' task
+```
+$ gulp script
+```
+
+
