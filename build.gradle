@@ -1,5 +1,13 @@
-task hello {
-  doLast {
-    println 'Hello world!'
-  }
+apply plugin: 'java'
+apply plugin:'application'
+mainClassName = 'org.anglee.hello.Main'
+
+repositories {
+  mavenCentral()
 }
+
+dependencies {
+  compile group: 'com.google.inject', name: 'guice', version: '3.0'
+  compile group: 'com.google.inject.extensions', name: 'guice-servlet', version: '3.0'
+}
+
