@@ -3,3 +3,7 @@ components/
 node_modules/
 .gradle/
 build/
+
+nbproject/
+build.xml
+manifest.mf
