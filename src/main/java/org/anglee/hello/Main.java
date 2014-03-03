@@ -21,6 +21,9 @@ class Main {
     // B's constructor is only called the first time
     Ai a = injector.getInstance(A.class);
     System.out.println(a.getInfo());
+    
+    // for AssistedInject, check out
+    // http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/assistedinject/FactoryModuleBuilder.html
     AFactory afact = injector.getInstance(AFactory.class);
     A aa = afact.create("TEST");
     System.out.println(aa.getInfo());
