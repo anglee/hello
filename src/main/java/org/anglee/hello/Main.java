@@ -1,6 +1,10 @@
 package org.anglee.hello;
 
 import com.google.inject.*;
+import org.anglee.hello.module.A;
+import org.anglee.hello.module.Ai;
+import org.anglee.hello.module.B;
+import org.anglee.hello.module.Bi;
 import org.anglee.hello.module.C;
 import org.anglee.hello.module.FirstModule;
 
@@ -10,5 +14,13 @@ class Main {
     System.out.println(injector);
     C c = injector.getInstance(C.class);
     c.printInfo();
+
+    // A is not a singleton class, B is
+    // A's constructor is called each time get instance of A.class
+    // B's constructor is only called the first time
+    Ai a = injector.getInstance(A.class);
+    System.out.println(a.getInfo());
+    Bi b = injector.getInstance(B.class);
+    System.out.println(b.getInfo());
   }
 }

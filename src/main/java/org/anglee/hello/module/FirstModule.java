@@ -15,8 +15,8 @@ public class FirstModule extends AbstractModule {
 
   @Override
   protected void configure() {
-    //bind(Ai.class).to(A.class);
-    bind(Ai.class).to(AAA.class);
+    bind(Ai.class).to(A.class);
+    //bind(Ai.class).to(AAA.class);
     bind(Bi.class).to(B.class);
   }
 }

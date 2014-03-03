@@ -11,6 +11,7 @@ public class C {
   
   @Inject
   C(Ai a, Bi b) {
+    System.out.println("constructing C");
     this._a = a;
     this._b = b;
   }
