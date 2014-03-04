@@ -13,7 +13,9 @@ import org.anglee.hello.module.Ei;
 import org.anglee.hello.module.F;
 import org.anglee.hello.module.FirstModule;
 import org.anglee.hello.module.G;
+import org.anglee.hello.module.HProvider;
 import org.anglee.hello.module.Hi;
+import org.anglee.hello.module.J;
 
 class Main {
 
@@ -51,7 +53,16 @@ class Main {
     G g = injector.getInstance(G.Factory.class).make("is gone.");
     System.out.println(g.getInfo());
 
-    Hi h = injector.getInstance(Hi.class);
-    System.out.println(h.getInfo());
+    HProvider hp = injector.getInstance(HProvider.class);
+    hp.setPostfix("Howdy");
+    Hi h1 = injector.getInstance(Hi.class);
+    System.out.println(h1.getInfo());
+    hp.setPostfix("Hola");
+    Hi h2 = injector.getInstance(Hi.class);
+    System.out.println(h2.getInfo());
+
+    hp.setPostfix("Hello");
+    J j = injector.getInstance(J.class);
+    System.out.println(j.getInfo());
   }
 }
