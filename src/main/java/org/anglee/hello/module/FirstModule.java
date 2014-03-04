@@ -9,6 +9,7 @@ package org.anglee.hello.module;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
+import com.google.inject.name.Names;
 
 /**
  *
@@ -17,19 +18,21 @@ public class FirstModule extends AbstractModule {
 
   @Override
   protected void configure() {
-    
+
     bind(Ai.class).to(A.class);
     //bind(Ai.class).to(AAA.class);
     bind(Bi.class).to(B.class);
-    
+
     install(new FactoryModuleBuilder()
         .implement(Ai.class, A.class)
         .build(AFactory.class));
+
+    bind(String.class).annotatedWith(Names.named("F's postfix")).toInstance("BarBar");
   }
-  
+
   @Provides
   Ei provideE() {
     Ei e = new E("FooFoo");
     return e;
-  }  
+  }
 }

@@ -10,6 +10,7 @@ import org.anglee.hello.module.C;
 import org.anglee.hello.module.D;
 import org.anglee.hello.module.E;
 import org.anglee.hello.module.Ei;
+import org.anglee.hello.module.F;
 import org.anglee.hello.module.FirstModule;
 
 class Main {
@@ -23,23 +24,26 @@ class Main {
     // B's constructor is only called the first time
     Ai a = injector.getInstance(A.class);
     System.out.println(a.getInfo());
-    
+
     // for AssistedInject, check out
     // http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/assistedinject/FactoryModuleBuilder.html
     AFactory afact = injector.getInstance(AFactory.class);
     A aa = afact.create("TEST");
     System.out.println(aa.getInfo());
-    
+
     Bi b = injector.getInstance(B.class);
     System.out.println(b.getInfo());
 
     C c = injector.getInstance(C.class);
     c.printInfo();
-    
+
     D d = injector.getInstance(D.class);
     d.printInfo();
-    
+
     Ei e = injector.getInstance(Ei.class);
     System.out.println(e.getInfo());
+
+    F f = injector.getInstance(F.class);
+    System.out.println(f.getInfo());
   }
 }
