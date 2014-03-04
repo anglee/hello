@@ -7,6 +7,7 @@
 package org.anglee.hello.module;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.Provides;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
 
 /**
@@ -25,4 +26,10 @@ public class FirstModule extends AbstractModule {
         .implement(Ai.class, A.class)
         .build(AFactory.class));
   }
+  
+  @Provides
+  Ei provideE() {
+    Ei e = new E("FooFoo");
+    return e;
+  }  
 }

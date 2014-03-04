@@ -8,6 +8,8 @@ import org.anglee.hello.module.B;
 import org.anglee.hello.module.Bi;
 import org.anglee.hello.module.C;
 import org.anglee.hello.module.D;
+import org.anglee.hello.module.E;
+import org.anglee.hello.module.Ei;
 import org.anglee.hello.module.FirstModule;
 
 class Main {
@@ -36,5 +38,8 @@ class Main {
     
     D d = injector.getInstance(D.class);
     d.printInfo();
+    
+    Ei e = injector.getInstance(Ei.class);
+    System.out.println(e.getInfo());
   }
 }
