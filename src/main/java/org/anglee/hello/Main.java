@@ -8,7 +8,6 @@ import org.anglee.hello.module.B;
 import org.anglee.hello.module.Bi;
 import org.anglee.hello.module.C;
 import org.anglee.hello.module.D;
-import org.anglee.hello.module.E;
 import org.anglee.hello.module.Ei;
 import org.anglee.hello.module.F;
 import org.anglee.hello.module.FirstModule;
