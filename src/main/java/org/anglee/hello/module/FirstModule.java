@@ -29,6 +29,8 @@ public class FirstModule extends AbstractModule {
 
     bind(String.class).annotatedWith(Names.named("F's postfix")).toInstance("BarBar");
     bind(String.class).annotatedWith(Names.named("G's prefix")).toInstance("Goodbye");
+
+    bind(Hi.class).toProvider(HProvider.class);
   }
 
   @Provides

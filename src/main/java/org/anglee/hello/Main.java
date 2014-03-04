@@ -13,6 +13,7 @@ import org.anglee.hello.module.Ei;
 import org.anglee.hello.module.F;
 import org.anglee.hello.module.FirstModule;
 import org.anglee.hello.module.G;
+import org.anglee.hello.module.Hi;
 
 class Main {
 
@@ -49,5 +50,8 @@ class Main {
 
     G g = injector.getInstance(G.Factory.class).make("is gone.");
     System.out.println(g.getInfo());
+
+    Hi h = injector.getInstance(Hi.class);
+    System.out.println(h.getInfo());
   }
 }
