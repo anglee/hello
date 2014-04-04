@@ -10,11 +10,16 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/angularfire/angularfire.js"></script>
     <script src="main.js"></script>
 </head>
 <body ng-controller="myCtrl">
     <div class="container">
-    {{ foo }}
+        <div>username = {{ foo.username }}</div>
+        <div>email = {{ foo.email }}</div>
+        <div><input ng-model="newName" /><button ng-click="updateName()">update username</button></div>
+        <div><input ng-model="newEmail" /><button ng-click="updateEmail()">update email</button></div>
     </div>
 </body>
 </html>
