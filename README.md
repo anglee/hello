@@ -1,4 +1,6 @@
 hello WebApp
 =====
 
-yo? yo!
+```
+bower install
+```
