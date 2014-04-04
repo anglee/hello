@@ -1,4 +1,4 @@
-hello WebApp
+hello Restangular
 =====
 
 ```
