@@ -9,11 +9,14 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="main.js"></script>
 </head>
-<body ng-controller="myCtrl">
+<body>
     <div class="container">
-    {{ foo }}
+        <a href="#/home">Home</a>
+        <a href="#/list">List</a>
+        <div ui-view></div>
     </div>
 </body>
 </html>
