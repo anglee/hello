@@ -64,7 +64,6 @@ digraph G {
 
   bkCoreManager -> bkUtils;
   bkCoreManager -> bkRecentMenu;
-  bkCoreManager -> fileChooserOp;
 
   bkEvaluatePluginManager -> bkUtils;
 
@@ -96,7 +95,7 @@ digraph G {
   bkOutputLog -> angularUtils;
   bkOutputLog -> cometd;
 
-  bkOutputDisplay -> "outputDisplayFactory";
+  bkOutputDisplay -> outputDisplayFactory;
 
   bkRecentMenu -> bkUtils;
 

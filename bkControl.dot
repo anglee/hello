@@ -20,20 +20,10 @@ digraph G {
 
   bkCoreManager -> bkUtils;
   bkCoreManager -> bkRecentMenu;
-  bkCoreManager -> fileChooserOp;
 
   bkEvaluatePluginManager -> bkUtils;
 
-  bkEvaluatorManager -> bkUtils;
-  bkEvaluatorManager -> bkEvaluatePluginManager;
-
-  bkHelper -> bkSessionManager;
-  bkHelper -> bkCoreManager;
-  bkHelper -> bkShare;
-
   bkMenuPluginManager -> bkUtils;
-
-  bkOutputDisplay -> "outputDisplayFactory";
 
   bkRecentMenu -> bkUtils;
 
