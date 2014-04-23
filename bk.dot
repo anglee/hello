@@ -5,7 +5,6 @@ digraph G {
   angularUtils -> "$q";
   angularUtils -> "$timeout";
 
-  bkApp -> "$routeParams";
   bkApp -> bkUtils;
   bkApp -> bkSession;
   bkApp -> bkSessionManager;
@@ -63,7 +62,6 @@ digraph G {
   bkControlItem -> bkRecentMenu;
   bkControlItem -> bkEvaluatePluginManager;
 
-  bkCoreManager -> "$dialog";
   bkCoreManager -> bkUtils;
   bkCoreManager -> bkRecentMenu;
   bkCoreManager -> fileChooserOp;
@@ -93,14 +91,8 @@ digraph G {
   bkNotebookEvaluators -> bkEvaluatePluginManager;
   bkNotebookEvaluators -> bkEvaluatorManager;
 
-  bkNotebookEvaluatorsEvaluatorSettings -> "$compile";
   bkNotebookEvaluatorsEvaluatorSettings -> bkSessionManager;
 
-  outputDisplayService -> "$injector";
-  outputDisplayFactory -> "$rootScope";
-
-  bkOutputDisplay -> "$compile";
-  bkOutputDisplay -> "$rootScope";
   bkOutputDisplay -> "outputDisplayFactory";
 
   bkRecentMenu -> "bkUtils";

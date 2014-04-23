@@ -18,7 +18,6 @@ digraph G {
   bkControlItem -> bkRecentMenu;
   bkControlItem -> bkEvaluatePluginManager;
 
-  bkCoreManager -> "$dialog";
   bkCoreManager -> bkUtils;
   bkCoreManager -> bkRecentMenu;
   bkCoreManager -> fileChooserOp;
@@ -34,11 +33,6 @@ digraph G {
 
   bkMenuPluginManager -> bkUtils;
 
-  outputDisplayService -> "$injector";
-  outputDisplayFactory -> "$rootScope";
-
-  bkOutputDisplay -> "$compile";
-  bkOutputDisplay -> "$rootScope";
   bkOutputDisplay -> "outputDisplayFactory";
 
   bkRecentMenu -> bkUtils;
