@@ -83,6 +83,9 @@ digraph G {
 
   bkNotebookEvaluatorsEvaluatorSettings -> bkSessionManager;
 
+  bkOutputLog -> angularUtils;
+  bkOutputLog -> cometd;
+
   bkOutputDisplay -> "outputDisplayFactory";
 
   bkRecentMenu -> bkUtils;
