@@ -1,0 +1,53 @@
+digraph G {
+  angularUtils -> "$rootScope";
+  angularUtils -> "$location";
+  angularUtils -> "$http";
+  angularUtils -> "$q";
+  angularUtils -> "$timeout";
+
+  bkCellPluginManager -> bkUtils;
+  bkCellPluginManager -> generalUtils;
+
+  bkControl -> bkCoreManager;
+  bkControl -> bkSession;
+  bkControl -> bkMenuPluginManager;
+  bkControl -> trackingService;
+
+  bkControlItem -> bkSession;
+  bkControlItem -> bkCoreManager;
+  bkControlItem -> bkRecentMenu;
+  bkControlItem -> bkEvaluatePluginManager;
+
+  bkCoreManager -> "$dialog";
+  bkCoreManager -> bkUtils;
+  bkCoreManager -> bkRecentMenu;
+  bkCoreManager -> fileChooserOp;
+
+  bkEvaluatePluginManager -> bkUtils;
+
+  bkEvaluatorManager -> bkUtils;
+  bkEvaluatorManager -> bkEvaluatePluginManager;
+
+  bkHelper -> bkSessionManager;
+  bkHelper -> bkCoreManager;
+  bkHelper -> bkShare;
+
+  bkMenuPluginManager -> bkUtils;
+
+  outputDisplayService -> "$injector";
+  outputDisplayFactory -> "$rootScope";
+
+  bkOutputDisplay -> "$compile";
+  bkOutputDisplay -> "$rootScope";
+  bkOutputDisplay -> "outputDisplayFactory";
+
+  bkRecentMenu -> "bkUtils";
+
+  bkSession -> bkUtils;
+
+  bkUtils -> generalUtils;
+  bkUtils -> angularUtils;
+  bkUtils -> trackingService;
+  bkUtils -> cometd;
+
+}

@@ -1,0 +1,111 @@
+digraph G {
+  angularUtils -> "$rootScope";
+  angularUtils -> "$location";
+  angularUtils -> "$http";
+  angularUtils -> "$q";
+  angularUtils -> "$timeout";
+
+  bkApp -> "$routeParams";
+  bkApp -> bkUtils;
+  bkApp -> bkSession;
+  bkApp -> bkSessionManager;
+  bkApp -> bkMenuPluginManager;
+  bkApp -> bkCellPluginManager;
+  bkApp -> bkCoreManager;
+  bkApp -> bkAppEvaluate;
+  bkApp -> bkNotebookVersionManager;
+  bkApp -> bkEvaluatorManager;
+
+  bkAppEvaluate -> bkUtils;
+  bkAppEvaluate -> bkEvaluatorManager;
+
+  newCellMenu -> generalUtils;
+  newCellMenu -> bkSessionManager;
+  newCellMenu -> bkCoreManager;
+  newCellMenu -> bkEvaluatorManager;
+
+  sectionCell -> generalUtils;
+  sectionCell -> bkShare;
+  sectionCell -> bkEvaluatorManager;
+  sectionCell -> bkSessionManager;
+  sectionCell -> bkCoreManager;
+  sectionCell -> bkCellPluginManager;
+
+  textCell -> bkSessionManager;
+
+  markdownCell -> bkSessionManager;
+
+  bkCellPluginManager -> bkUtils;
+  bkCellPluginManager -> generalUtils;
+
+  codeCell -> "$rootScope";
+  codeCell -> generalUtils;
+  codeCell -> bkShare;
+  codeCell -> bkEvaluatorManager;
+  codeCell -> bkCellPluginManager;
+  codeCell -> bkSessionManager;
+  codeCell -> bkCoreManager;
+
+  inputMenu -> bkCoreManager;
+
+  bkCodeCellOutput -> generalUtils;
+  bkCodeCellOutput -> outputDisplayFactory;
+  bkCodeCellOutput -> bkEvaluatorManager;
+
+  bkCodeCellOutputMenu -> generalUtils;
+
+  bkCoreManager -> "$dialog";
+  bkCoreManager -> bkUtils;
+  bkCoreManager -> bkRecentMenu;
+  bkCoreManager -> fileChooserOp;
+
+  bkEvaluatePluginManager -> bkUtils;
+
+  bkEvaluatorManager -> bkUtils;
+  bkEvaluatorManager -> bkEvaluatePluginManager;
+
+  bkHelper -> bkSessionManager;
+  bkHelper -> bkCoreManager;
+  bkHelper -> bkShare;
+
+  bkMenuPluginManager -> bkUtils;
+
+  bkNotebook -> generalUtils;
+  bkNotebook -> bkShare;
+  bkNotebook -> bkEvaluatorManager;
+  bkNotebook -> bkCellPluginManager;
+  bkNotebook -> bkSessionManager;
+  bkNotebook -> bkCoreManager;
+  bkNotebook -> bkOutputLog;
+
+  bkNotebookEvaluators -> bkCoreManager;
+  bkNotebookEvaluators -> bkSessionManager;
+  bkNotebookEvaluators -> bkMenuPluginManager;
+  bkNotebookEvaluators -> bkEvaluatePluginManager;
+  bkNotebookEvaluators -> bkEvaluatorManager;
+
+  bkNotebookEvaluatorsEvaluatorSettings -> "$compile";
+  bkNotebookEvaluatorsEvaluatorSettings -> bkSessionManager;
+
+  outputDisplayFactory -> "$rootScope";
+
+  bkOutputDisplay -> "$compile";
+  bkOutputDisplay -> "$rootScope";
+  bkOutputDisplay -> "outputDisplayFactory";
+
+  bkRecentMenu -> "bkUtils";
+
+  bkSession -> bkUtils;
+
+  bkSessionManager -> bkUtils;
+  bkSessionManager -> bkSession;
+  bkSessionManager -> bkNotebookCellModelManager;
+  bkSessionManager -> bkEvaluatorManager;
+  bkSessionManager -> bkRecentMenu;
+
+  bkUtils -> generalUtils;
+  bkUtils -> angularUtils;
+  bkUtils -> trackingService;
+  bkUtils -> cometd;
+
+}
