@@ -41,9 +41,9 @@ digraph G {
   bkOutputDisplay -> "$rootScope";
   bkOutputDisplay -> "outputDisplayFactory";
 
-  bkRecentMenu -> "bkUtils";
+  bkRecentMenu -> bkUtils;
 
-  bkSession -> bkUtils;
+  bkSession -> angularUtils;
 
   bkUtils -> generalUtils;
   bkUtils -> angularUtils;

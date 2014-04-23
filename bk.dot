@@ -105,7 +105,7 @@ digraph G {
 
   bkRecentMenu -> "bkUtils";
 
-  bkSession -> bkUtils;
+  bkSession -> angularUtils;
 
   bkSessionManager -> bkUtils;
   bkSessionManager -> bkSession;
