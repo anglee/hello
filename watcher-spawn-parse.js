@@ -21,4 +21,4 @@ fs.watch(filename, function() {
     console.dir([parts[0], parts[4], parts[8]]);
   });
 });
-console.log("Now watching target.txt for changes...");
+console.log("Now watching " + filename + " for changes...");
