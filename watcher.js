@@ -7,10 +7,14 @@ const
 if (!filename) {
   throw Error("A file to watch must be specified!");
 }
+try {
+  fs.watch(filename, function(err) {
+    let ls = spawn('ls', ['-lh', filename]);
+    ls.stdout.pipe(process.stdout);
+  });
+  console.log("Now watching " + filename + " for changes...");
+} catch(e) {
+  console.log("Fail to watch " + filename);
+  console.dir(e);
+}
 
-fs.watch(filename, function() {
-  let ls = spawn('ls', ['-lh', filename]);
-  ls.stdout.pipe(process.stdout);
-//  console.log("File 'target.txt' just changed!");
-});
-console.log("Now watching " + filename + " for changes...");
