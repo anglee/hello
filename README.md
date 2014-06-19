@@ -1,6 +1,8 @@
 hello
 =====
 
-Just me trying things out ...
+To run
 
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)
+```
+node --harmony watcher.js target.txt
+```
