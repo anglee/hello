@@ -1,3 +1,12 @@
-h1 {
-    font-size: 100pt;
+.big-text {
+    font-size: 250pt;
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.black {
+    color: #000000;
 }
