@@ -11,23 +11,23 @@
      ng-swipe-left="swipeLeft()"
      ng-swipe-right="swipeRight()">
   <div class="row">
-    <button class="btn btn-default" ng-click="swipeLeft()"><</button>
+    <button class="btn btn-default" ng-click="swipeRight()"><</button>
     <span class="big-text" ng-show="pad()">&nbsp;</span>
   <span class="big-text"
         ng-class="getClass()">
     {{ getCard(foo) }}
   </span>
-    <button class="btn btn-default" ng-click="swipeRight()">></button>
+    <button class="btn btn-default" ng-click="swipeLeft()">></button>
   </div>
 
   <div class="row">
-    <button class="btn btn-default" ng-click="swipeLeft()"><</button>
+    <button class="btn btn-default" ng-click="swipeRight()"><</button>
     <span class="big-text">&nbsp;</span>
     <span class="big-text" ng-show="pad2()">&nbsp;</span>
   <span class="big-text">
     {{ foo+1 }}
   </span>
-    <button class="btn btn-default" ng-click="swipeRight()">></button>
+    <button class="btn btn-default" ng-click="swipeLeft()">></button>
   </div>
 </div>
   <script src="./bower_components/angular/angular.min.js"></script>
