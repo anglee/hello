@@ -1,0 +1,26 @@
+{
+  "name": "hello",
+  "version": "0.0.0",
+  "description": "hello =====",
+  "main": "server.js",
+  "dependencies": {
+    "gulp": "~3.8.5"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "~1.0.4",
+    "gulp-jshint": "~1.6.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/anglee/hello"
+  },
+  "author": "ang.lee@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anglee/hello/issues"
+  },
+  "homepage": "https://github.com/anglee/hello"
+}

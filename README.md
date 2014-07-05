@@ -1,6 +1,14 @@
-hello
+hello nodemon (gulp-nodemon)
 =====
 
-Just me trying things out ...
+https://github.com/remy/nodemon
+https://github.com/JacksonGariety/gulp-nodemon
+http://travismaynard.com/writing/getting-started-with-gulp
 
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)
+```
+npm install
+gulp develop
+# open 127.0.0.1:8888 in browser
+# change server.js
+# reload page in browser
+```
