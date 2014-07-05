@@ -1,4 +1,4 @@
-hello nodemon (gulp-nodemon)
+hello gulp-nodemon
 =====
 
 ```
