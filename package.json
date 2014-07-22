@@ -1,0 +1,11 @@
+{
+  "name": "hello",
+  "version": "0.0.0",
+  "description": "Hello ES6",
+  "dependencies": {},
+  "devDependencies": {
+    "traceur": "~0.0.50",
+    "gulp": "~3.8.6",
+    "gulp-traceur": "~0.8.0"
+  }
+}

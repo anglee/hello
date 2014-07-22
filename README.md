@@ -1,6 +1,8 @@
-hello
+Hello ES6
 =====
 
-Just me trying things out ...
+```
+$ traceur --sourcemap --out dist/app.js app.js --experimental
+```
 
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)
+
