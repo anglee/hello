@@ -1,10 +1,11 @@
 MongoDB and Mongoose
 =====
+start db
 ```
-mongod # start db
+mongod
 ```
 
-in a separate terminal
+import data (in a separate terminal)
 
 ```
 mongoimport --db test --collection people --jsonArray data.js
