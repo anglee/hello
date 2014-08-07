@@ -1,6 +1,5 @@
-hello
+Object.observe
 =====
 
-Just me trying things out ...
+http://www.html5rocks.com/en/tutorials/es7/observe/
 
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    // Let's say we have a model with data
+    var model = {};
+
+    // Which we then observe
+    Object.observe(model, function(changes){
+
+      // This asynchronous callback runs
+      changes.forEach(function(change) {
+
+        // Letting us know what changed
+        console.log(change.type, change.name, change.oldValue);
+      });
+
+    });
+
+    model.foo = "Bar";
+    model.foo = "Rab";
+  </script>
+</head>
+<body>
+
+</body>
+</html>
