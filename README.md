@@ -1,6 +1,4 @@
-hello
+Polymer example
 =====
 
-Just me trying things out ...
-
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)
+Downloaded from http://www.polymer-project.org/docs/start/tutorial/intro.html
