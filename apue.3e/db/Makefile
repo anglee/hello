@@ -18,7 +18,7 @@ ifeq "$(PLATFORM)" "freebsd"
   EXTRALD=-R.
 endif
 ifeq "$(PLATFORM)" "macos"
-  EXTRALD=-R.
+#  EXTRALD=-R.
 endif
 
 all: libapue_db.so.1 t4 $(LIBMISC)
