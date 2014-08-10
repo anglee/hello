@@ -3,7 +3,7 @@
 int main()
 {
   // Write a string of text to the console:
-  printf( "Masters of the void." );
+  printf( "Hello, world.\n" );
 	
   return 0; // Tell OS everything is OK.
 }
