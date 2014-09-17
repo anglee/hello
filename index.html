@@ -5,18 +5,30 @@
   <title>Hello p5.js</title>
   <script src="p5-complete-0.3.6/p5.js"></script>
   <script>
-    var s = function (sketch) {
-      sketch.setup = function () {
-        sketch.createCanvas(100, 100);
-      };
 
-      sketch.draw = function () {
-        sketch.ellipse(50, 50, 80, 80);
+    var getSparkline = function(numbers, containerId) {
+      var w = 200;
+      var h = 100;
+      var s = function (sketch) {
+        sketch.setup = function () {
+          sketch.createCanvas(w, h);
+          sketch.noLoop(0);
+          window.sketch = sketch;
+        };
+
+        sketch.draw = function () {
+          var xstep = w / (numbers.length - 1);
+          var yScale = h / 8;
+          for (var i = 0; i < numbers.length - 1; ++i) {
+            sketch.line(xstep * i, h - numbers[i] * yScale, xstep * (i+1), h - numbers[i+1] * yScale);
+          }
+
+        };
       };
+      var myp5 = new p5(s, containerId);
     };
 
-    var myp5 = new p5(s, "canvas001");
-    var myp5 = new p5(s, "canvas002");
+    getSparkline([1,2,4,8,4,2,1], "canvas001");
 
   </script>
 </head>
