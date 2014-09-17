@@ -8,12 +8,31 @@
 </head>
 <body>
 <!-- Publish .items so others can use it for attribute binding. -->
-<polymer-element name="my-comp" attributes="items">
+<polymer-element name="my-comp" attributes="counter">
+  <template>
+    <button on-tap="{{increment}}">Increment</button>
+  </template>
   <script>
     Polymer('my-comp', {
       ready: function() {
-        console.log("my-comp ready");
-        this.items = "BAR";
+        console.log("my-comp ready", this.counter);
+        this.counter = 1;
+      },
+      increment: function() {
+        this.counter++;
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="my-comp2" attributes="counter">
+  <template>
+    <b>{{counter}}</b>
+  </template>
+  <script>
+    Polymer('my-comp2', {
+      ready: function() {
+        console.log("my-comp2 ready", this.counter);
       }
     });
   </script>
@@ -21,7 +40,8 @@
 
 <polymer-element name="my-app">
   <template>
-    <my-comp items="{{foo}}"></my-comp>
+    <my-comp counter="{{foo}}"></my-comp>
+    <my-comp2 counter="{{foo}}"></my-comp2>
   </template>
   <script>
     Polymer('my-app', {
