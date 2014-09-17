@@ -27,8 +27,11 @@
       };
       var myp5 = new p5(s, containerId);
     };
-
-    getSparkline([1,2,4,8,4,2,1], document.getElementById("canvas001"));
+    
+    window.onload = function() {
+      getSparkline([1,2,4,8,4,2,1], document.getElementById("canvas001"));
+      getSparkline([1,2,4,8,4,2,1], document.getElementById("canvas002"));
+    };
 
   </script>
 </head>
