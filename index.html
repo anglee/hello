@@ -7,29 +7,33 @@
   <script src="bower_components/polymer/polymer.js"></script>
 </head>
 <body>
-<polymer-element name="my-counter" attributes="counter">
+<!-- Publish .items so others can use it for attribute binding. -->
+<polymer-element name="my-comp" attributes="items">
+  <script>
+    Polymer('my-comp', {
+      ready: function() {
+        console.log("my-comp ready");
+        this.items = "BAR";
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="my-app">
   <template>
-    <style> /*...*/ </style>
-    <div id="label">
-      <content></content>
-    </div>
-    Value: <span id="counterVal">{{counter}}</span><br>
-    <button on-tap="{{increment}}">Increment</button>
+    <my-comp items="{{foo}}"></my-comp>
   </template>
   <script>
-    Polymer({
-      counter: 0, // Default value
-      counterChanged: function () {
-        this.$.counterVal.classList.add('highlight');
-      },
-      increment: function () {
-        this.counter++;
+    Polymer('my-app', {
+      ready: function() {
+        console.log("my-app ready");
+        console.log("foo = ", this.foo);
       }
     });
   </script>
 </polymer-element>
 
 <!-- Use element -->
-<my-counter counter="10">Points</my-counter>
+<my-app></my-app>
 </body>
 </html>
