@@ -5,16 +5,23 @@
   <title>Hello p5.js</title>
   <script src="p5-complete-0.3.6/p5.js"></script>
   <script>
-    function setup() {
-      //createCanvas(640, 480);
-    }
+    var s = function (sketch) {
+      sketch.setup = function () {
+        sketch.createCanvas(100, 100);
+      };
 
-    function draw() {
-      ellipse(50, 50, 80, 80);
-    }
+      sketch.draw = function () {
+        sketch.ellipse(50, 50, 80, 80);
+      };
+    };
+
+    var myp5 = new p5(s, "canvas001");
+    var myp5 = new p5(s, "canvas002");
+
   </script>
 </head>
 <body>
-
+  <div id="canvas001"></div>
+  <div id="canvas002"></div>
 </body>
 </html>
