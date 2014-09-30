@@ -1,6 +1,4 @@
-hello
+ScrollSpy
 =====
 
-Just me trying things out ...
-
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)
+http://getbootstrap.com/javascript/#scrollspy
