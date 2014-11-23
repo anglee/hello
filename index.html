@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Promise</title>
+  <script>
+    var doAsync  = function(rejectIt) {
+      return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+          var doneTime = new Date();
+          if (!rejectIt) {
+            resolve({
+              resolvedData: 'resolved at ' + doneTime
+            });
+          } else {
+            reject({
+              rejectedData: 'rejected at ' + doneTime
+            });
+          }
+        }, 500);
+      });
+    };
+    var logIt = function(data) {
+      console.log("LOG IT", data);
+    };
+    var logIt2 = function(data) {
+      console.log("LOG IT 2", data);
+    };
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I promised I will try es6</title>
+  <script src="./lib/q/q-20130830/q.js"></script>
+  <script>
+    var step1 = function () {
+      console.log("This is step 1");
+    };
+    var step2 = function () {
+      console.log("This is step 2");
+    };
+    var step3 = function () {
+      console.log("This is step 3");
+    };
+
+    // Note the following can be simply rewritten as :
+    // Q.fcall(step1).then(step2).then(step3)
+    var promise1 = Q.fcall(step1); // this will cause step1 to run asynchronously (queued for event loop)
+
+    var promise2 = promise1.then(step2); // step2 won't run until promise1 is fulfilled
+    // note the promise must have a then method, which returns another promise
+
+    var promise3 = promise2.then(step3); // step3 won't run until promise2 is fulfilled
+  </script>
+</head>
+<body>
+Check console.
+</body>
+</html>
