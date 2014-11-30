@@ -1,0 +1,30 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "minimal starting point for a node app",
+  "main": "app.js",
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "lodash": "^2.4.1",
+    "q": "^1.1.2",
+    "requirejs": "^2.1.15"
+  },
+  "devDependencies": {
+    "gulp-jasmine": "^1.0.1",
+    "gulp-nodemon": "^1.0.4",
+    "jasmine-node": "^1.14.5"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/anglee/hello"
+  },
+  "author": "Ang Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anglee/hello/issues"
+  },
+  "homepage": "https://github.com/anglee/hello"
+}

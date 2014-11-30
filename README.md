@@ -1,6 +1,18 @@
 hello
 =====
+Use this as the starting point of a node app
 
-Just me trying things out ...
 
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)
+```
+$ gulp dev
+```
+and then change app.js to make test pass
+
+====
+Alternatively, using jasmine-node
+```
+#install jasmine-node
+$ npm install -g jasmine-node
+#run test
+$ jasmine-node spec/app-spec.js
+```
