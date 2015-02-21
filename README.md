@@ -1,6 +1,11 @@
-hello
+hello, webpack
 =====
 
-Just me trying things out ...
+http://webpack.github.io/
+http://webpack.github.io/docs/tutorials/getting-started/
+https://egghead.io/lessons/javascript-intro-to-webpack
 
-See: [branches](https://github.com/anglee/hello/branches) and [wiki](https://github.com/anglee/hello/wiki/_pages)
+```
+$ npm install webpack -g
+$ webpack --watch
+```
